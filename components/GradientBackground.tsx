@@ -2,7 +2,7 @@ import React from 'react'
 import grid from '../public/grids.svg'
 const GradientBackground = () => {
   return (
-    <div className="relative flex min-h-screen h-96 w-full items-center justify-center bg-[#080A0C] p-4 overflow-hidden">
+    <div className="relative flex min-h-screen h-[70rem] w-full items-center justify-center bg-[#080A0C] p-4 overflow-hidden">
       {/* Top left circle */}
       <div className="absolute z-0 -top-[20rem] -left-[20rem] h-[50rem] w-[50rem] rounded-full bg-[#0064FF] opacity-20 blur-[128px]"></div>
       
