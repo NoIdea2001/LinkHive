@@ -14,8 +14,58 @@
   }
 }
 
+
+@font-face {
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Compact Display';
+  src: url('/fonts/SFCompactDisplay-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Compact Text';
+  src: url('/fonts/SFCompactText-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Compact Text';
+  src: url('/fonts/SFCompactText-RegularItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SF Compact Text';
+  src: url('/fonts/SFCompactText-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+*{
+  font-family: 'SF Compact Text';
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(35, 35, 47);
+  font-family: 'SFCompactText-Regular';
 }
