@@ -1,17 +1,20 @@
 import React from 'react'
 import grid from '../public/grids.svg'
+import Image from 'next/image'
+import star from '@/public/Star2.svg'
+import flower from '@/public/Periwinkle.svg'
 const GradientBackground = () => {
-  return (
-    <div className="relative flex min-h-screen h-[70rem] w-full items-center justify-center bg-[#080A0C] p-4 overflow-hidden">
+  return (<>
+    <div className="relative flex min-h-screen h-[140rem] w-full items-center justify-center bg-[#080A0C] p-4 overflow-hidden">
       {/* Top left circle */}
       <div className="absolute z-0 -top-[20rem] -left-[20rem] h-[50rem] w-[50rem] rounded-full bg-[#0064FF] opacity-20 blur-[128px]"></div>
       
       {/* Bottom right circle */}
-      <div className="absolute z-0 bottom-[8rem] right-[-20rem] h-[40.25rem] w-[40.25rem] rounded-full bg-[#0064FF] opacity-20 blur-[128px]"></div>
+      <div className="absolute z-0 top-[13rem] right-[-20rem] h-[40.25rem] w-[40.25rem] rounded-full bg-[#0064FF] opacity-20 blur-[128px]"></div>
       
       {/* Left Grid overlay */}
       <div 
-        className="absolute left-0 z-10 w-1/2 h-full"
+        className="absolute left-0 z-10 w-1/2 h-[70rem] top-0"
         style={{
           backgroundImage: `url(${grid.src})`,
           backgroundRepeat: 'no-repeat',
@@ -22,7 +25,7 @@ const GradientBackground = () => {
 
       {/* Right Grid overlay (mirrored) */}
       <div 
-        className="absolute right-0 z-10 w-1/2 h-full"
+        className="absolute right-0 z-10 w-1/2 h-[70rem] top-0"
         style={{
           backgroundImage: `url(${grid.src})`,
           backgroundRepeat: 'no-repeat',
@@ -31,7 +34,22 @@ const GradientBackground = () => {
           transform: 'scaleX(-1)'
         }}
       ></div>
+      <Image 
+        src={star} 
+        alt='star' 
+        className='absolute top-[30rem] right-[18rem] '
+      />
+      <Image 
+        src={flower} 
+        alt='flower'
+        className="absolute top-[58rem] left-[20rem] "
+      />
+      <div className='h-[60rem] w-[60rem] absolute rounded-full bg-[#0064FF] opacity-20 blur-[128px] top-[75rem]'></div>
     </div>
+    {/* <div className="relative flex min-h-screen h-[70rem] w-full items-center justify-center bg-[#080A0C] p-4 overflow-hidden">
+    </div> */}
+
+  </>
   )
 }
 

@@ -1,13 +1,16 @@
 "use client"
 
 import Image from 'next/image'
-import React, { useState } from 'react'
 import vector from '../public/Vector.svg'
 import SwitchTog from "@/components/SwitchTog";
 import Qrcode from "@/public/QR-code.svg"
 
-const ToggleButton = () => {
-  const [isQrMode, setIsQrMode] = useState(false);
+interface ToggleButtonProps {
+  isQrMode: boolean;
+  setIsQrMode: (checked: boolean) => void;
+}
+
+const ToggleButton: React.FC<ToggleButtonProps> = ({ isQrMode, setIsQrMode }) => {
 
   const handleToggle = (checked: boolean) => {
     console.log('Toggle state:', checked); // For debugging
