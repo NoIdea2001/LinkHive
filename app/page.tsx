@@ -12,9 +12,9 @@ import Dashboard from "@/components/Dashboard";
 export default function Home() {
   const [isQrMode, setIsQrMode] = useState(false);
   return (
-    <div className="relative">
+    <div className="relative w-[100vw]">
       <GradientBackground/>
-      <div className="absolute z-10 top-0 left-1/2 -translate-x-1/2 w-full min-w-[800px] text-white">
+      <div className="absolute z-10 top-0 left-1/2 -translate-x-1/2 w-[100vw] text-white flex flex-col items-center">
         <Navbar/>
         <HeroSection/>
         <ToggleButton isQrMode={isQrMode} setIsQrMode={setIsQrMode}/>
