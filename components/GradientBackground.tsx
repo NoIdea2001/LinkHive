@@ -6,7 +6,7 @@ import flower from '@/public/Periwinkle.svg'
 
 const GradientBackground = () => {
   return (<>
-    <div className="relative flex min-h-screen h-[250vh] w-[100vw] items-center justify-center bg-[#080A0C] p-4 overflow-clip">
+    <div className="relative flex min-h-screen h-[260vh] w-[100vw] items-center justify-center bg-[#080A0C] p-4 overflow-clip">
       {/* Top left circle */}
       <div className="absolute z-0 -top-[20rem] -left-[20rem] h-[50rem] w-[50rem] rounded-full bg-[#0064FF] opacity-20 blur-[128px]"></div>
       
@@ -49,7 +49,9 @@ const GradientBackground = () => {
     </div>
     {/* <div className="relative flex min-h-screen h-[70rem] w-full items-center justify-center bg-[#080A0C] p-4 overflow-hidden">
     </div> */}
-
+    <div className='w-[100vw] h-[60vh] bg-[#080A0C] overflow-hidden relative'>
+      <div className='w-[100vw] h-[100vw] bg-[#FFFFFF] blur-3xl absolute rounded-full -top-[95rem] left-1/2 -translate-x-1/2 z-10'></div>
+    </div>
   </>
   )
 }

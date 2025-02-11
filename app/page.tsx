@@ -8,6 +8,7 @@ import URLshortInput from "@/components/URLshortInput";
 import QRgenInput from "@/components/QRgenInput";
 import {useState } from "react";
 import Dashboard from "@/components/Dashboard";
+import TrustLine from '@/components/TrustLine'
 
 export default function Home() {
   const [isQrMode, setIsQrMode] = useState(false);
@@ -20,6 +21,7 @@ export default function Home() {
         <ToggleButton isQrMode={isQrMode} setIsQrMode={setIsQrMode}/>
         {isQrMode?<QRgenInput/>:<URLshortInput/>}
         <Dashboard/>
+        <TrustLine />
       </div>
     </div>
   );

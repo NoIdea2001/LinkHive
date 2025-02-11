@@ -19,6 +19,15 @@ export default {
         'sf-display': ['SF Compact Display', 'system-ui', 'sans-serif'],
         'sf-text': ['SF Compact Text', 'system-ui', 'sans-serif'],
       },
+      animation: {
+        'scroll-left': 'scroll-left 12s linear infinite',
+      },
+      keyframes: {
+        'scroll-left': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-33.33%)' },
+        },
+      },
     },
   },
   plugins: [],
