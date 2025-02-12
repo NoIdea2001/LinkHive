@@ -17,7 +17,7 @@ const InfiiteLogoCorusel = () => {
   return (
     <div className="relative w-[90vw] mx-[5vw] overflow-hidden mt-16">
       {/* Left fade gradient */}
-      <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-[#080A0C] to-transparent z-10"></div>
+      <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-[#080A0C] to-transparent z-10"/>
 
       <div className="inline-flex animate-scroll-left">
         {[1,2,3].map((set) => (
@@ -39,7 +39,7 @@ const InfiiteLogoCorusel = () => {
       </div>
 
       {/* Right fade gradient */}
-      <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-[#080A0C] to-transparent z-10"></div>
+      <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-[#080A0C] to-transparent z-10"/>
     </div>
   )
 }

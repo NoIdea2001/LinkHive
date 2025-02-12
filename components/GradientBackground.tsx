@@ -52,6 +52,10 @@ const GradientBackground = () => {
     <div className='w-[100vw] h-[60vh] bg-[#080A0C] overflow-hidden relative'>
       <div className='w-[100vw] h-[100vw] bg-[#FFFFFF] blur-3xl absolute rounded-full -top-[95rem] left-1/2 -translate-x-1/2 z-10'></div>
     </div>
+    <div className='w-[100vw] h-[150vh] bg-[#080A0C] overflow-hidden relative'>
+    <div className="absolute z-0 top-[20rem] -left-[20rem] h-[30rem] w-[30rem] rounded-full bg-[#0064FF] opacity-20 blur-[128px]"></div>
+
+    </div>
   </>
   )
 }
