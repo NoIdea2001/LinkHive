@@ -6,6 +6,30 @@ import qrman from '@/public/QRman.svg'
 
 const QRgenInput = () => {
   const [placeholder, setPlaceholder] = useState('Enter your URL here')
+  const [inputValue, setInputValue] = useState("");
+  const [copyStatus, setCopyStatus] = useState(""); 
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setInputValue(e.target.value);
+    };
+
+  const handlePaste = async () => {
+      try {
+        const text = await navigator.clipboard.readText();
+        if (text) {
+          setInputValue(text);
+          setCopyStatus("Pasted!");
+          setTimeout(() => setCopyStatus(""), 2000);
+        } else {
+          setCopyStatus("Nothing to paste");
+          setTimeout(() => setCopyStatus(""), 2000);
+        }
+      } catch (err) {
+        console.error("Failed to read clipboard: ", err);
+        setCopyStatus("Failed to read clipboard");
+        setTimeout(() => setCopyStatus(""), 2000);
+      }
+    };
 
   useEffect(() => {
     const handleResize = () => {
@@ -52,6 +76,8 @@ const QRgenInput = () => {
             <input 
               type="text" 
               placeholder={placeholder}
+              value={inputValue}
+              onChange={handleInputChange}
               className="w-full lg:w-[26.7rem] h-[2.7rem] 
                 bg-white/10 
                 rounded-[0.5rem]
@@ -63,13 +89,21 @@ const QRgenInput = () => {
                 focus:outline-none
                 flex items-center"
             />
-            <div className="absolute right-6 lg:right-2 top-1/2 -translate-y-1/2">
+            <div 
+            className="absolute right-6 lg:right-2 top-1/2 -translate-y-1/2"
+            onClick={handlePaste}
+            title="Paste from clipboard">
               <Image 
                 src={clipboard} 
                 alt='clipboard'
                 className="h-[30px]"
               />
             </div>
+            {copyStatus && (
+          <div className="absolute -bottom-6 right-6 text-sm text-green-400">
+            {copyStatus}
+          </div>
+        )}
         </div>
         <button className="w-[14rem] h-[2.6rem] 
             rounded-[1.3rem]
